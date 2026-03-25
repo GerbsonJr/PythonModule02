@@ -7,6 +7,7 @@ def garden_operations(opt: int) -> str:
     elif opt == 1:
         try:
             test = 1 / 0
+            print(f"{test}")
         except ZeroDivisionError:
             return "Caught ZeroDivisionError: division by zero"
     elif opt == 2:
@@ -16,10 +17,10 @@ def garden_operations(opt: int) -> str:
             return "Caught FileNotFoundError: No such file 'missing.txt'"
     elif opt == 3:
         try:
-            test = {}
-            test["missing\\_plant"]
-        except KeyError:
-            return "Caught KeyError: 'missing\\_plant'"
+            _ = "plant" + 1
+        except TypeError as e:
+            return f"Caught TypeError: {e}"
+
     else:
         try:
             int("abc")
@@ -39,7 +40,7 @@ def test_error_types():
     print("Testing FileNotFoundError...")
     print(garden_operations(2))
     print()
-    print("Testing KeyError..")
+    print("Testing TypeError..")
     print(garden_operations(3))
     print()
     print("Testing multiple errors together...")

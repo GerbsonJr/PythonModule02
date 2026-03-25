@@ -65,6 +65,6 @@ if __name__ == "__main__":
     print("")
     test_water_error(9)
     print("")
-    test_catch_all_garden_errors(100, 50)
+    test_catch_all_garden_errors(29, 9)
     print("")
     print("All custom error types work correctly!")
