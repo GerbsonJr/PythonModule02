@@ -20,12 +20,12 @@ def garden_operations(opt: int) -> str:
             _ = "plant" + 1
         except TypeError as e:
             return f"Caught TypeError: {e}"
-
     else:
         try:
             int("abc")
         except (ValueError, ZeroDivisionError, FileNotFoundError, KeyError):
             return "Caught an error, but program continues!"
+    return ""
 
 
 def test_error_types():
